@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <form id="form">
+      <input type="file" id="file" name="avatar" />
+      <input type="submit" value="Upload" />
+    </form>
+  </body>
+  <script>
+    $("#form").submit(function (event) {
+      event.preventDefault();
+
+      var formData = new FormData();
+      formData.append("avatar", $("#file")[0].files[0]);
+
+      $.ajax({
+        url: "http://localhost:3001/upload",
+        data: formData,
+        type: "POST",
+        processData: false,
+        contentType: false,
+        success: function (response) {
+          console.log(response);
+        },
+      });
+    });
+  </script>
+</html>

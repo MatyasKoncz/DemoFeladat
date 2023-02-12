@@ -1,0 +1,13 @@
+body {
+    background-color: grey;
+    color:rgb(23, 4, 4);
+}
+
+main {
+    background-color: white;
+    max-width: 1200px;
+}
+
+.wrapper {
+    display:none;
+}

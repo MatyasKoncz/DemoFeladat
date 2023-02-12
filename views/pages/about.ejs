@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head'); %>
+</head>
+
+<body>
+
+    <header>
+        <%- include('../partials/header', {variant: 'compact' }); %>
+    </header>
+
+    <main class="mx-auto pl-3">
+        <div class="row">
+            <div class="col-sm-8">
+                <div class="jumbotron mt-5">
+                    <small>Készítette:</small>
+                    <h3>Koncz Mátyás</h3>
+                    <a href="phone: +36 70 756 5014"><button class="btn btn-warning">+36 70 756 5014</button></a><br>
+                    <a href="mailto: koncz.matyas.mail@gmail.com"><button class="btn btn-warning mt-2">koncz.matyas.mail@gmail.com</button></a>
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="well p-3">
+                    <h5>Technológiák:</h5>
+                    <ul class="list-group">
+                        <li class="list-group-item">Node JS</li>
+                        <li class="list-group-item">mysqli</li>
+                        <li class="list-group-item">Javascript</li>
+                        <li class="list-group-item">jQuery</li>
+                        <li class="list-group-item">Bootstrap</li>
+                        <li class="list-group-item">CSS</li>
+                      </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

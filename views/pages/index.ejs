@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+  <%- include('../partials/head'); %>
+</head>
+
+<body>
+
+  <header>
+    <%- include('../partials/header'); %>
+  </header>
+
+  <main class="mx-auto pl-3">
+    <div class="mx-auto container-fluid pt-3" id="table">
+        <button class="btn btn-primary" style="float: right;" id="new-event">Új esemény</button>  
+        <div class="row p-1">
+        <div class="col-sm-2">Cím</div>
+        <div class="col-sm-3">Kezdete</div>
+        <div class="col-sm-3">Vége</div>
+        <div class="col-sm-2"></div>
+        <div class="col-sm-2"></div>
+        <hr class="w-75">
+      </div>
+      <% data.forEach(function(data) { %>
+        <div class="row p-1" id="<%= data.id %>">
+          <div class="col-sm-2"><strong>
+              <%= data.cim %>
+            </strong></div>
+          <div class="col-sm-3"><small>
+              <%= data.kezdete %>
+            </small></div>
+          <div class="col-sm-3"><small>
+              <%= data.vege %>
+            </small></div>
+          <div class="col-sm-2"><button class="btn-sm btn btn-warning" data-id="<%= data.id %>"
+              onclick="detailsButton(this)">Részletek</button></div>
+          <div class="col-sm-2"><button class="btn-sm btn btn-danger" data-id="<%= data.id %>"
+              onclick="deleteButton(this)">Törlés</button></div>
+        </div>
+        <% }); %>
+    </div>
+    <div class="mx-auto p-2" id="details-div"></div>
+  </main>
+</body>
+
+</html>
